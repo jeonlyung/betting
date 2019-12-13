@@ -19,12 +19,11 @@
 </head>
 
 <body class="bg-dark">
-
   <div class="container">
     <div class="card card-register mx-auto mt-5">
       <div class="card-header">회원가입</div>
       <div class="card-body">
-        <form>
+        <form id="registForm" action="/regist">
           <div class="form-group">
             <div class="form-row">
               <div class="col-md-12">
@@ -37,7 +36,7 @@
           </div>
           <div class="form-group">
             <div class="form-label-group">
-              <input type="email" id="inputEmail" class="form-control" placeholder="아이디(이메일)" required="required">
+              <input type="email" id="email" class="form-control" placeholder="아이디(이메일)" required="required">
               <label for="inputEmail">아이디(이메일)</label>
             </div>
           </div>
@@ -57,11 +56,11 @@
               </div>
             </div>
           </div>
-          <a class="btn btn-primary btn-block" href="login.html">가입</a>
+          <a class="btn btn-primary btn-block" id="join" onclick="goJoin()">가입</a>
         </form>
         <div class="text-center">
           <a class="d-block small mt-3" href="/login">로그인 페이지</a>
-          <a class="d-block small" href="/mypage/forgot_password">비밀번호를 잊어버리셨나요?</a>
+          <a class="d-block small" href="/user/forgot_password">비밀번호를 잊어버리셨나요?</a>
         </div>
       </div>
     </div>
@@ -71,6 +70,24 @@
   <script src="resources/mypage/vendor/jquery/jquery.min.js"></script>
   <script src="resources/mypage/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="resources/mypage/vendor/jquery-easing/jquery.easing.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  
+  <script type="text/javascript">
+  
+//  가입 온클릭 함수
+  	function goJoin(){
+  		var name = $("#name").val();
+  		var email = $("#email").val();
+  		var password = $("#inputPassword").val();
+  		var confirm_password = $("#confirmPassword").val();
+  		
+  		if ($("#registForm").valid()) {
+			$("#registForm").submit();
+		}	
+  	}
+  </script>
+  
+  
 </body>
 
 </html>
