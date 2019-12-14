@@ -18,7 +18,7 @@ public class UserSeviceImpl implements UserService {
 
 	@Override
 	public void regist(UserVO vo) throws Exception {
-		
+		userdao.regist(vo);
 	}
 
 }

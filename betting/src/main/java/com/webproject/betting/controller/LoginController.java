@@ -58,11 +58,20 @@ public class LoginController {
 	}
 	
 	
-//	회원가입
-	@RequestMapping(value = "/regist")
-	public String regist() {
-		logger.info("regist.......");
+//	회원가입 페이지 이동
+	@RequestMapping(value = "/regist", method = RequestMethod.GET)
+	public String registGET(@ModelAttribute UserVO userVO) throws Exception {
+		logger.info("registGET.......");
 		return "regist";
+	}
+	
+//	회원가입 값 저장
+	@RequestMapping(value = "/regist", method = RequestMethod.POST)
+	public String registPOST(@ModelAttribute UserVO userVO) throws Exception {
+		logger.info("registPOST.......");
+		userservice.regist(userVO);
+		
+		return "redirect:/login";
 	}
 	
 }

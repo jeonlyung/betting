@@ -5,4 +5,8 @@
     
 <mapper namespace="com.webproject.betting.dao.UserDAO">
 
+	<insert id="regist">
+		insert into user(name, email, password)
+		values(#{name}, #{email}, #{password});
+	</insert>
 </mapper>

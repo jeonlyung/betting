@@ -15,15 +15,16 @@
   <!-- Custom fonts for this template-->
   <link href="resources/mypage/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
   <link href="resources/mypage/css/sb-admin.css" rel="stylesheet">
-
 </head>
 
 <body class="bg-dark">
   <div class="container">
     <div class="card card-register mx-auto mt-5">
       <div class="card-header">회원가입</div>
-      <div class="card-body">
-        <form id="registForm" action="/regist">
+      <div class="card-body">\
+      
+      
+        <form id="registForm" method="post" action="/regist">
           <div class="form-group">
             <div class="form-row">
               <div class="col-md-12">
@@ -44,7 +45,7 @@
             <div class="form-row">
               <div class="col-md-6">
                 <div class="form-label-group">
-                  <input type="password" id="inputPassword" class="form-control" placeholder="비밀번호" required="required">
+                  <input type="password" id="password" class="form-control" placeholder="비밀번호" required="required">
                   <label for="inputPassword">비밀번호</label>
                 </div>
               </div>
@@ -71,17 +72,22 @@
   <script src="resources/mypage/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="resources/mypage/vendor/jquery-easing/jquery.easing.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+   
+   <!--이메일/비밀번호 검사하는 플러그인제공   -->
+  <script src="/resources/js/jquery/jquery.validate.js"></script>           
+  <script src="/resources/js/jquery/additional-methods.js"></script>
+  <script src="/resources/js/jquery/messages_ko.js"></script>				
+
   
   <script type="text/javascript">
-  
 //  가입 온클릭 함수
   	function goJoin(){
   		var name = $("#name").val();
   		var email = $("#email").val();
-  		var password = $("#inputPassword").val();
+  		var password = $("#password").val();
   		var confirm_password = $("#confirmPassword").val();
   		
-  		if ($("#registForm").valid()) {
+  		if ($("#registForm").validate()) {
 			$("#registForm").submit();
 		}	
   	}

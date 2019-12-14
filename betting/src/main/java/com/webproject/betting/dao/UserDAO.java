@@ -22,6 +22,7 @@ public class UserDAO {
 	
 	private String NAME_SPACE = "com.webproject.betting.dao.UserDAO";
 	
+	
 	public UserVO login(UserVO vo) throws Exception {
 		Map<String, Object> dto = new HashMap<>();
 		dto.put("id", vo.getEmail());  						// 아이디(이메일)
@@ -29,6 +30,16 @@ public class UserDAO {
 		logger.info("암호화 : " + Encryption.SHA512(vo.getPassword()));
 		
 		return session.selectOne(NAME_SPACE, dto);
+		
+	}
+
+	public void regist(UserVO vo) {
+		Map<String, Object> dto = new HashMap<>();
+		dto.put("name", vo.getName());
+		dto.put("email", vo.getEmail());
+		dto.put("password", Encryption.SHA512(vo.getPassword())); //비밀번호 (암호화)
+		
+		session.insert(NAME_SPACE+ ".regist", dto);
 		
 	}
 	
