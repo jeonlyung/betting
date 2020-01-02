@@ -21,7 +21,7 @@
   <div class="container">
     <div class="card card-register mx-auto mt-5">
       <div class="card-header">회원가입</div>
-      <div class="card-body">\
+      <div class="card-body">
       
       
         <form id="registForm" method="post" action="/regist">
@@ -29,7 +29,7 @@
             <div class="form-row">
               <div class="col-md-12">
                 <div class="form-label-group">
-                  <input type="text" id="name" class="form-control" placeholder="이름" required="required" autofocus="autofocus">
+                  <input type="text" id="name" name="name" class="form-control" placeholder="이름" required="required" autofocus="autofocus">
                   <label for="name">이름</label>
                 </div>
               </div>
@@ -37,7 +37,7 @@
           </div>
           <div class="form-group">
             <div class="form-label-group">
-              <input type="email" id="email" class="form-control" placeholder="아이디(이메일)" required="required">
+              <input type="email" id="email" name="email" class="form-control" placeholder="아이디(이메일)" required="required">
               <label for="inputEmail">아이디(이메일)</label>
             </div>
           </div>
@@ -45,7 +45,7 @@
             <div class="form-row">
               <div class="col-md-6">
                 <div class="form-label-group">
-                  <input type="password" id="password" class="form-control" placeholder="비밀번호" required="required">
+                  <input type="password" id="password" name="password" class="form-control" placeholder="비밀번호" required="required">
                   <label for="inputPassword">비밀번호</label>
                 </div>
               </div>
@@ -87,10 +87,18 @@
   		var password = $("#password").val();
   		var confirm_password = $("#confirmPassword").val();
   		
-  		if ($("#registForm").validate()) {
+//   		if(password != confirm_password){
+//   			alert("비밀번호와 확인 비밀번호가 일치 하지 않습니다.");
+//   			return false;
+//   		}
+  		
+  		
+  		if ($("#registForm").valid()) {
 			$("#registForm").submit();
 		}	
   	}
+  	
+  	
   </script>
   
   

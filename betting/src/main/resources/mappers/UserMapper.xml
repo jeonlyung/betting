@@ -5,8 +5,17 @@
     
 <mapper namespace="com.webproject.betting.dao.UserDAO">
 
+	<!-- 로그인 -->
+	<select id="login" resultType="com.webproject.betting.domain.UserVO">
+		select id, name, email, password 
+		from user
+		where email = #{email} and password = #{password}
+	</select>
+
+
+    <!-- 회원 가입 -->
 	<insert id="regist">
-		insert into user(name, email, password)
-		values(#{name}, #{email}, #{password});
+		insert into user(name, email, password, cre_date)
+		values(#{name}, #{email}, #{password}, now());
 	</insert>
 </mapper>

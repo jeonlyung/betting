@@ -52,7 +52,7 @@
   </header>
 
   <!-- Portfolio Section -->
-  <section class="page-section portfolio" id="portfolio">
+  <section class="page-section poddrtfolio" id="portfolio">
     <div class="container">
 
       <!-- Portfolio Section Heading -->
@@ -507,6 +507,15 @@
   <script src="resources/js/jqBootstrapValidation.js"></script>
   <script src="resources/js/contact_me.js"></script>
   <script src="resources/js/freelancer.min.js"></script>
+  
+  <script type="text/javascript">
+  		$(document).ready(function(){
+//   			msgCheck();
+  		});
+  </script>
+
+
+
 
 </body>
 
