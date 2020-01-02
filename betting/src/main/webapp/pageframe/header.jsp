@@ -33,14 +33,34 @@
           <li class="nav-item mx-0 mx-lg-1">
             <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">미정2</a>
           </li>
-          <li class="nav-item mx-0 mx-lg-1">
-            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="/login">로그인</a>
-          </li>
+          
+          <c:choose>
+          	<c:when test="${ empty sessionScope.login }">
+		          <li class="nav-item mx-0 mx-lg-1">
+		            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="/user/regist">회원가입</a>
+		          </li>
+		          <li class="nav-item mx-0 mx-lg-1">
+		            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="/login">로그인</a>
+		          </li>
+          	</c:when>
+          	
+          	<c:when test="${ !empty sessionScope.login }">
+		          <li class="nav-item mx-0 mx-lg-1">
+		            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="/">마이페이지</a>
+		          </li>
+		          <li class="nav-item mx-0 mx-lg-1">
+		            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="/logout">로그아웃</a>
+		          </li>
+          	
+          	</c:when>
+          		
+          </c:choose>
         </ul>	
       </div>
     </div>
   </nav>
 </body>
+
 
 <script type="text/javascript">
 	$(document).ready(function(){

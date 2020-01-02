@@ -51,7 +51,7 @@
         </form>
         
         <div class="text-center">
-          <a class="d-block small mt-3" href="/regist">회원가입</a>
+          <a class="d-block small mt-3" href="/user/regist">회원가입</a>
           <a class="d-block small" href="/user/forgot_password">아이디/비밀번호 찾기</a>
         </div>
       </div>

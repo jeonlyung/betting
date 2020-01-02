@@ -34,8 +34,8 @@ public class LoginController {
 	
 //	로그인(페이지에서 폼전송했을 때)
 	@RequestMapping(value = "/login",  method = RequestMethod.POST)
-	public String loginPOST(@ModelAttribute UserVO userVO, HttpSession session, Model model,HttpServletRequest request,
-	HttpServletResponse response) throws Exception {
+	public String loginPOST(@ModelAttribute UserVO userVO, HttpSession session, Model model,HttpServletRequest request,	
+			HttpServletResponse response) throws Exception {
 		logger.info("loginPOST.......");
 		logger.info("userVO...... : " + userVO);
 		
@@ -56,35 +56,30 @@ public class LoginController {
 		}else {
 			logger.info("new login success");
 			model.addAttribute("msg", "로그인 성공하였습니다.");
-			session.setAttribute("login", vo.getEmail());
+			session.setAttribute("login", vo.getEmail());   	   //로그인 유무 구분갑으로 사용
 			return "redirect:/";
 		}
 	}
 	
-	
-//	회원가입 페이지 이동
-	@RequestMapping(value = "/regist", method = RequestMethod.GET)
-	public String registGET(@ModelAttribute UserVO userVO, HttpSession session, Model model) throws Exception {
-		logger.info("registGET.......");
-		return "regist";
-	}
-	
-//	회원가입 값 저장
-	@RequestMapping(value = "/regist", method = RequestMethod.POST)
-	public String registPOST(@ModelAttribute UserVO userVO, HttpSession session, Model model, RedirectAttributes rttr) throws Exception {
-		logger.info("registPOST.......");
-		logger.info("userVO : " + userVO);
-		
-		try {
-			userService.regist(userVO);
-			rttr.addFlashAttribute("errorMessageTitle", "가입 성공");
-			rttr.addFlashAttribute("errorMessage", "회원가입에 성공했습니다.");
-		} catch (Exception e) {
-			e.printStackTrace();
-			return "redirect:/regist";
+	// 로그 아웃 기능
+		@RequestMapping(value = "/logout", method = RequestMethod.GET)
+		public String logout(HttpServletRequest request, HttpServletResponse response, HttpSession session,	RedirectAttributes rttr) throws Exception {
+			
+			logger.info("로그아웃 ");
+			Object login_YN = session.getAttribute("login");		//로그인 유무 값
+			
+
+			if (login_YN != null) {
+				session.removeAttribute("login");
+				session.invalidate();
+					
+				rttr.addFlashAttribute("errorMessageTitle", "로그아웃");
+				rttr.addFlashAttribute("errorMessage", "로그아웃하셨습니다");
+			} 
+			
+			return "redirect:/login";
 		}
-		
-		return "redirect:/login";
-	}
+	
+
 	
 }
