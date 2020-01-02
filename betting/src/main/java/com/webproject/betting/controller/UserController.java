@@ -48,4 +48,32 @@ public class UserController {
 		
 		return "redirect:/login";
 	}
+//	비밀번호 찾는 페이지 이동
+	@RequestMapping(value = "/forgotPassword", method = RequestMethod.GET)
+	public String forgotPassword(@ModelAttribute UserVO userVO, HttpSession session, Model model) throws Exception {
+		logger.info("forgetPasswordGET.......");
+		return "/user/forgot_password";
+	}
+	
+//	마이페이지 페이지 이동
+	@RequestMapping(value = "/dashboard", method = RequestMethod.GET)
+	public String dashboardGET(@ModelAttribute UserVO userVO, HttpSession session, Model model) throws Exception {
+		logger.info("dashboardGET.......");
+		return "/user/dashboard";
+	}
+	
+//	차트 페이지 이동
+	@RequestMapping(value = "/chart", method = RequestMethod.GET)
+	public String chartGET(@ModelAttribute UserVO userVO, HttpSession session, Model model) throws Exception {
+		logger.info("chartGET.......");
+		return "/user/chart";
+	}
+	
+//	테이블 페이지 이동
+	@RequestMapping(value = "/table", method = RequestMethod.GET)
+	public String tableGET(@ModelAttribute UserVO userVO, HttpSession session, Model model) throws Exception {
+		logger.info("tableGET.......");
+		return "/user/table";
+	}
 }
+

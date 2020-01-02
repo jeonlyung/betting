@@ -1,6 +1,9 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
+<!--============================= HEADER =============================-->
+	<%@ include file="/pageframe/header.jsp"%>
+<!--==============================HEADER =============================-->
 <head>
 
   <meta charset="utf-8">
@@ -24,21 +27,21 @@
       <div class="card-header">Reset Password</div>
       <div class="card-body">
         <div class="text-center mb-4">
-          <h4>Forgot your password?</h4>
-          <p>Enter your email address and we will send you instructions on how to reset your password.</p>
+          <h4>비밀번호를 잊어버리셨나요?</h4>
+<!--           <p>Enter your email address and we will send you instructions on how to reset your password.</p> -->
         </div>
         <form>
           <div class="form-group">
             <div class="form-label-group">
-              <input type="email" id="inputEmail" class="form-control" placeholder="Enter email address" required="required" autofocus="autofocus">
-              <label for="inputEmail">Enter email address</label>
+              <input type="email" id="email" class="form-control" placeholder="아이디(이메일)을 적으세요." required="required" autofocus="autofocus">
+              <label for="email">아이디(이메일)을 적으세요.</label>
             </div>
           </div>
           <a class="btn btn-primary btn-block" href="login.html">Reset Password</a>
         </form>
         <div class="text-center">
-          <a class="d-block small mt-3" href="register.html">Register an Account</a>
-          <a class="d-block small" href="login.html">Login Page</a>
+          <a class="d-block small mt-3" href="/user/regist">회원가입 페이지</a>
+          <a class="d-block small" href="/login">로그인 페이지</a>
         </div>
       </div>
     </div>

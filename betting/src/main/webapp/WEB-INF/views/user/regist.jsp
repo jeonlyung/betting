@@ -4,6 +4,9 @@
 
 <head>
 
+	<!--============================= HEADER =============================-->
+	<%@ include file="/pageframe/header.jsp"%>
+	<!--==============================HEADER =============================-->
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -13,8 +16,19 @@
   <title>회원가입</title>
 
   <!-- Custom fonts for this template-->
-  <link href="resources/mypage/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-  <link href="resources/mypage/css/sb-admin.css" rel="stylesheet">
+    <!-- Bootstrap core JavaScript-->
+  <script src="/resources/mypage/vendor/jquery/jquery.min.js"></script>
+  <script src="/resources/mypage/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="/resources/mypage/vendor/jquery-easing/jquery.easing.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+   
+   <!--이메일/비밀번호 검사하는 플러그인제공   -->
+  <script src="/resources/js/jquery/jquery.validate.js"></script>           
+  <script src="/resources/js/jquery/additional-methods.js"></script>
+  <script src="/resources/js/jquery/messages_ko.js"></script>				
+  
+  <link href="/resources/mypage/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="/resources/mypage/css/sb-admin.css" rel="stylesheet">
 </head>
 
 <body class="bg-dark">
@@ -61,24 +75,13 @@
         </form>
         <div class="text-center">
           <a class="d-block small mt-3" href="/login">로그인 페이지</a>
-          <a class="d-block small" href="/user/forgot_password">비밀번호를 잊어버리셨나요?</a>
+          <a class="d-block small" href="/user/forgotPassword">비밀번호를 잊어버리셨나요?</a>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- Bootstrap core JavaScript-->
-  <script src="resources/mypage/vendor/jquery/jquery.min.js"></script>
-  <script src="resources/mypage/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="resources/mypage/vendor/jquery-easing/jquery.easing.min.js"></script>
-  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-   
-   <!--이메일/비밀번호 검사하는 플러그인제공   -->
-  <script src="/resources/js/jquery/jquery.validate.js"></script>           
-  <script src="/resources/js/jquery/additional-methods.js"></script>
-  <script src="/resources/js/jquery/messages_ko.js"></script>				
 
-  
   <script type="text/javascript">
 //  가입 온클릭 함수
   	function goJoin(){
@@ -92,12 +95,15 @@
 //   			return false;
 //   		}
   		
-  		
   		if ($("#registForm").valid()) {
 			$("#registForm").submit();
 		}	
   	}
   	
+  	
+	$(document).ready(function(){
+
+	});
   	
   </script>
   

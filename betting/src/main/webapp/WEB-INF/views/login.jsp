@@ -15,8 +15,8 @@
   <title>로그인</title>
 
   <!-- Custom fonts for this template-->
-  <link href="resources/mypage/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-  <link href="resources/mypage/css/sb-admin.css" rel="stylesheet">
+  <link href="/resources/mypage/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="/resources/mypage/css/sb-admin.css" rel="stylesheet">
 
 </head>
 
@@ -52,7 +52,7 @@
         
         <div class="text-center">
           <a class="d-block small mt-3" href="/user/regist">회원가입</a>
-          <a class="d-block small" href="/user/forgot_password">아이디/비밀번호 찾기</a>
+          <a class="d-block small" href="/user/forgotPassword">아이디/비밀번호 찾기</a>
         </div>
       </div>
     </div>

@@ -9,15 +9,6 @@
   <meta name="author" content="">
 
   <title>betting</title>
-
-  <!-- Custom fonts for this theme -->
-  <link href="resources/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-
-  <!-- Theme CSS -->
-  <link href="resources/css/freelancer.min.css" rel="stylesheet">
-
 </head>
 
 <body id="page-top">
@@ -499,14 +490,6 @@
       </div>
     </div>
   </div>
-
-  <!-- Bootstrap core JavaScript -->
-  <script src="resources/vendor/jquery/jquery.min.js"></script>
-  <script src="resources/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="resources/vendor/jquery-easing/jquery.easing.min.js"></script>
-  <script src="resources/js/jqBootstrapValidation.js"></script>
-  <script src="resources/js/contact_me.js"></script>
-  <script src="resources/js/freelancer.min.js"></script>
   
   <script type="text/javascript">
   		$(document).ready(function(){
