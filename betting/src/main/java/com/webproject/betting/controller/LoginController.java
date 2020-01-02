@@ -21,8 +21,6 @@ public class LoginController {
 	
 	private static final Logger logger = LoggerFactory.getLogger(LoginController.class);
 	
-	
-	
 	@Inject
 	private static UserSeviceImpl userservice;
 	
