@@ -16,6 +16,7 @@ import com.webproject.betting.utility.Encryption;
 @Repository
 public class UserDAO {
 	
+	
 	@Inject
 	private SqlSession session;
 	private static final Logger logger = LoggerFactory.getLogger(UserDAO.class);
