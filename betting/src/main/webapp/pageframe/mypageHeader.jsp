@@ -29,14 +29,6 @@
 
     <!-- Navbar Search -->
     <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
-      <div class="input-group">
-        <input type="text" class="form-control" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
-        <div class="input-group-append">
-          <button class="btn btn-primary" type="button">
-            <i class="fas fa-search"></i>
-          </button>
-        </div>
-      </div>
     </form>
 
     <!-- Navbar -->
@@ -59,10 +51,10 @@
           <span class="badge badge-danger">7</span>
         </a>
         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="messagesDropdown">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
+          <a class="dropdown-item" href="#">받은 메시지</a>
+          <a class="dropdown-item" href="#">보낸 메시지</a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Something else here</a>
+          <a class="dropdown-item" href="#">미정</a>
         </div>
       </li>
       <li class="nav-item dropdown no-arrow">
@@ -70,15 +62,35 @@
           <i class="fas fa-user-circle fa-fw"></i>
         </a>
         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
-          <a class="dropdown-item" href="#">Settings</a>
-          <a class="dropdown-item" href="#">Activity Log</a>
+          <a class="dropdown-item" href="#">프로필</a>
+          <a class="dropdown-item" href="#">설정</a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">Logout</a>
+          <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">로그아웃</a>
         </div>
       </li>
     </ul>
 
   </nav>
+  
+  
+    <!-- 로그아웃 Modal-->
+  <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">로그아웃 </h5>
+          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">Ã</span>
+          </button>
+        </div>
+        <div class="modal-body">정말로 로그아웃을 하시겠습니까?</div>
+        <div class="modal-footer">
+          <a class="btn btn-primary" href="/logout">네</a>
+          <button class="btn btn-secondary" type="button" data-dismiss="modal">아니요</button>
+        </div>
+      </div>
+    </div>
+  </div>
   
 </body>
 

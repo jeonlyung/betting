@@ -52,7 +52,7 @@ public class UserController {
 	@RequestMapping(value = "/forgotPassword", method = RequestMethod.GET)
 	public String forgotPassword(@ModelAttribute UserVO userVO, HttpSession session, Model model) throws Exception {
 		logger.info("forgetPasswordGET.......");
-		return "/user/forgot_password";
+		return "/user/forgotPassword";
 	}
 	
 //	마이페이지 페이지 이동

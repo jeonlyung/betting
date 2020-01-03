@@ -33,7 +33,7 @@
 	</beans:bean>
 
 	<!-- 로그인 인터셉터와 인증 인터셉터 -->
-	<!-- <beans:bean id="authInterceptor" class="com.webproject.betting.interceptor.AuthInterceptor"></beans:bean>
+	<beans:bean id="authInterceptor" class="com.webproject.betting.utility.AuthInterceptor"></beans:bean>
 	<mvc:interceptors>
 		<mvc:interceptor>
 
@@ -46,13 +46,12 @@
 			
 			<mvc:exclude-mapping path="/user/regist" />
 			
-			<mvc:exclude-mapping path="/api/checkId" />
+<!-- 			<mvc:exclude-mapping path="/api/checkId" /> -->
 			
 			<beans:ref bean="authInterceptor" />
 		</mvc:interceptor>
 
 	</mvc:interceptors>
-	 -->
 
 	<!-- 제이슨뷰 빈 생성 -->
 	<beans:bean id="jsonView" class="org.springframework.web.servlet.view.json.MappingJackson2JsonView"></beans:bean>

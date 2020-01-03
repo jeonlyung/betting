@@ -28,4 +28,9 @@ public class UserSeviceImpl implements UserService {
 		userDao.regist(vo);
 	}
 
+	// intercepter session 체크 메소드
+	public UserVO checkLoginBefore(String value) {
+		return null;
+	}
+
 }

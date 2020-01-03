@@ -56,7 +56,7 @@ public class LoginController {
 		}else {
 			logger.info("new login success");
 			model.addAttribute("msg", "로그인 성공하였습니다.");
-			session.setAttribute("login", vo.getEmail());   	   //로그인 유무 구분갑으로 사용
+			session.setAttribute("login", vo);   	   //로그인 유무 구분갑으로 사용
 			return "redirect:/";
 		}
 	}
